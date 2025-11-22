@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mind_peace/constants/colors.dart';
+import 'package:mind_peace/dialogs/lesson_item_dialog.dart';
 import 'package:mind_peace/examples/dataset.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -34,8 +35,9 @@ class _HomeScreenState extends State<HomeScreen> {
             iconColor: lesson.isFav
                 ? AppColors.primaryDark
                 : AppColors.textPrimaryLight,
-            onTap: () {
-              // Play audio at lesson.audioPath and show SRT at lesson.srtPath
+            onTap: () async {
+              final ok = await lessonItemDialog(context, lesson);
+              print(ok!.name);
             },
           );
         },

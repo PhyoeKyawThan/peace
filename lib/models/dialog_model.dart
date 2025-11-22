@@ -1,0 +1,1 @@
+enum LessonDialogAction { listen, close }
