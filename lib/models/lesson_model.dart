@@ -1,6 +1,6 @@
 class Lesson {
   final String title;
-  final String sayawtaw;
+  final String sayartaw;
   final String description;
   final String audioPath;
   final String srtPath;
@@ -9,7 +9,7 @@ class Lesson {
 
   Lesson({
     required this.title,
-    required this.sayawtaw,
+    required this.sayartaw,
     required this.description,
     required this.audioPath,
     required this.srtPath,
@@ -19,25 +19,25 @@ class Lesson {
 
   factory Lesson.fromJson(Map<String, dynamic> json) {
     return Lesson(
-      title: json['title'],
-      sayawtaw: json['sayawtaw'],
-      description: json['description'],
-      audioPath: json['audioPath'],
-      srtPath: json['srtPath'],
-      imagePath: json['imagePath'],
-      isFav: json['isFav'],
+      title: json['title']?.toString() ?? '',
+      sayartaw: json['sayartaw']?.toString() ?? '',
+      description: json['description']?.toString() ?? '',
+      audioPath: json['audioPath']?.toString() ?? '',
+      srtPath: json['srtPath']?.toString() ?? '',
+      imagePath: json['imagePath']?.toString() ?? '',
+      isFav: (json['isFav'] == 1) ? true : false,
     );
   }
 
   static Map<String, dynamic> toMap(Lesson lesson) {
     return {
       "title": lesson.title,
-      "sayartaw": lesson.sayawtaw,
+      "sayartaw": lesson.sayartaw,
       "description": lesson.description,
       "audioPath": lesson.audioPath,
       "srtPath": lesson.srtPath,
       "imagePath": lesson.imagePath,
-      "isFav": lesson.isFav,
+      "isFav": lesson.isFav ? 1 : 0,
     };
   }
 }

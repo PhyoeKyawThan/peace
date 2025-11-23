@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:mind_peace/constants/colors.dart';
+import 'package:mind_peace/services/audio_service.dart';
 import 'package:mind_peace/screens/home.dart';
 import 'package:mind_peace/widgets/bottom_navigation.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(
-    MaterialApp(
-      title: 'Buddhist Lessons',
-      theme: AppTheme.lightTheme,
-      darkTheme: AppTheme.darkTheme,
-      themeMode: ThemeMode.system, // Auto switches based on system settings
-      home: MindPeace(),
+    ChangeNotifierProvider(
+      create: (_) => AudioService(),
+      child: MaterialApp(
+        title: 'Buddhist Lessons',
+        theme: AppTheme.lightTheme,
+        darkTheme: AppTheme.darkTheme,
+        themeMode: ThemeMode.light,
+        home: MindPeace(),
+      ),
     ),
   );
 }
@@ -30,6 +35,20 @@ class _MindPeaceState extends State<MindPeace> {
     setState(() {
       _currentIndex = index;
     });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    Provider.of<AudioService>(context, listen: false).loadLessons();
+    _initAudioService();
+  }
+
+  Future<void> _initAudioService() async {
+    final audioService = Provider.of<AudioService>(context, listen: false);
+    await audioService.loadLastTrack();
+
+    setState(() {});
   }
 
   @override

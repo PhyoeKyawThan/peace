@@ -2,6 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:mind_peace/constants/colors.dart';
 import 'package:mind_peace/dialogs/lesson_item_dialog.dart';
 import 'package:mind_peace/examples/dataset.dart';
+import 'package:mind_peace/helpers/database_helper.dart';
+import 'package:mind_peace/models/dialog_model.dart';
+import 'package:mind_peace/models/lesson_model.dart';
+import 'package:mind_peace/services/audio_service.dart';
+import 'package:mind_peace/widgets/home_top_player.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -12,35 +18,68 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    final audioService = context.watch<AudioService>();
     return Scaffold(
       appBar: AppBar(title: Text("တရားတော်များ")),
-      body: ListView.builder(
-        itemCount: lessonList.length,
-        itemBuilder: (BuildContext context, int index) {
-          final lesson = lessonList[index];
-          return ListTile(
-            leading: ClipRRect(
-              borderRadius: BorderRadiusGeometry.circular(50),
-              child: Image.asset(
-                "assets/images/pexels-paperpeacock-1585716.jpg",
-                width: 50,
-                height: 50,
-                fit: BoxFit.cover,
-              ),
+      body: Column(
+        children: [
+          audioService.isPlaying
+              ? HomeTopPlayer(lesson: audioService.currentPlayingLesson)
+              : SizedBox.shrink(),
+          Expanded(
+            child: ListView.builder(
+              itemCount: audioService.lessonList.length,
+              itemBuilder: (BuildContext context, int index) {
+                final lesson = audioService.lessonList[index];
+                return ListTile(
+                  leading: ClipRRect(
+                    borderRadius: BorderRadiusGeometry.circular(50),
+                    child: Image.asset(
+                      "assets/images/pexels-paperpeacock-1585716.jpg",
+                      width: 50,
+                      height: 50,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  title: Text(lesson.title),
+                  subtitle: Text(lesson.sayartaw),
+                  textColor: AppColors.accentDark,
+                  trailing: Icon(Icons.bookmark),
+                  iconColor: lesson.isFav
+                      ? AppColors.primaryDark
+                      : AppColors.textPrimaryLight,
+                  onTap: () async {
+                    final dialogAction = await lessonItemDialog(
+                      context,
+                      lesson,
+                    );
+                    if (dialogAction == LessonDialogAction.listen) {
+                      await audioService.play(
+                        lesson.audioPath,
+                        index: index,
+                        lesson: lesson,
+                      );
+                    }
+                  },
+                );
+              },
             ),
-            title: Text(lesson.title),
-            subtitle: Text(lesson.sayawtaw),
-            textColor: AppColors.accentDark,
-            trailing: Icon(Icons.bookmark),
-            iconColor: lesson.isFav
-                ? AppColors.primaryDark
-                : AppColors.textPrimaryLight,
-            onTap: () async {
-              final ok = await lessonItemDialog(context, lesson);
-              print(ok!.name);
-            },
-          );
+          ),
+        ],
+      ),
+      floatingActionButton: IconButton(
+        onPressed: () async {
+          if (audioService.isPlaying) {
+            await audioService.pause();
+          } else {
+            await audioService.resume();
+          }
         },
+        icon: Icon(audioService.isPlaying ? Icons.pause : Icons.play_arrow),
+        style: ButtonStyle(
+          backgroundColor: WidgetStateProperty.all(AppColors.primaryLight),
+          padding: WidgetStateProperty.all(EdgeInsets.all(8)),
+        ),
       ),
     );
   }
