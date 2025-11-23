@@ -15,12 +15,10 @@ class BottomNavigation extends StatelessWidget {
       currentIndex: currentIndex,
       showSelectedLabels: true,
       showUnselectedLabels: false,
+      selectedItemColor: AppColors.highlightLight,
       items: [
         _buildItem("Home", Icon(Icons.home)),
-        _buildItem(
-          "Book Mark",
-          Icon(Icons.bookmark, color: AppColors.highlightDark),
-        ),
+        _buildItem("Book Mark", Icon(Icons.bookmark)),
       ],
       onTap: (index) => handler(index),
     );

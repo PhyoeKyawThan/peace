@@ -20,7 +20,7 @@ Future<LessonDialogAction?> lessonItemDialog(
             ClipRRect(
               borderRadius: BorderRadius.circular(10),
               child: Image.asset(
-                "assets/images/pexels-paperpeacock-1585716.jpg",
+                "assets/images/default.jpg",
                 width: double.infinity,
                 height: 200,
                 fit: BoxFit.cover,

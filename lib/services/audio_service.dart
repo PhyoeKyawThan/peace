@@ -4,7 +4,7 @@ import 'package:mind_peace/helpers/database_helper.dart';
 import 'package:mind_peace/models/lesson_model.dart';
 
 class AudioService extends ChangeNotifier {
-  int _currentIndex = 0;
+  int _currentIndex = -1;
   Lesson? _currentPlayingLesson;
   List<Lesson> _lessonList = [];
 
@@ -52,6 +52,14 @@ class AudioService extends ChangeNotifier {
   Future<void> resume() async {
     await _player.play();
     notifyListeners();
+  }
+
+  Future<void> setFav(int index) async {
+    final lesson = _lessonList[index];
+    lesson.isFav = !lesson.isFav;
+    _lessonList[index] = lesson;
+    notifyListeners();
+    await DatabaseHelper.instance.updateLesson(lesson);
   }
 
   Future<void> stop() async {

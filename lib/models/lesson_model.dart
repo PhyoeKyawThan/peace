@@ -1,13 +1,15 @@
 class Lesson {
+  final int? id;
   final String title;
   final String sayartaw;
   final String description;
   final String audioPath;
   final String srtPath;
   final String imagePath;
-  final bool isFav;
+  bool isFav;
 
   Lesson({
+    this.id,
     required this.title,
     required this.sayartaw,
     required this.description,
@@ -19,6 +21,7 @@ class Lesson {
 
   factory Lesson.fromJson(Map<String, dynamic> json) {
     return Lesson(
+      id: json['id'] ?? 0,
       title: json['title']?.toString() ?? '',
       sayartaw: json['sayartaw']?.toString() ?? '',
       description: json['description']?.toString() ?? '',

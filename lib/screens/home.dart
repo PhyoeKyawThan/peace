@@ -32,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   leading: ClipRRect(
                     borderRadius: BorderRadiusGeometry.circular(50),
                     child: Image.asset(
-                      "assets/images/pexels-paperpeacock-1585716.jpg",
+                      "assets/images/default.jpg",
                       width: 50,
                       height: 50,
                       fit: BoxFit.cover,
@@ -41,7 +41,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   title: Text(lesson.title),
                   subtitle: Text(lesson.sayartaw),
                   textColor: AppColors.accentDark,
-                  trailing: Icon(Icons.bookmark),
+                  trailing: IconButton(
+                    onPressed: () => audioService.setFav(index),
+                    icon: Icon(Icons.bookmark),
+                  ),
                   iconColor: lesson.isFav
                       ? AppColors.primaryDark
                       : AppColors.textPrimaryLight,
@@ -64,20 +67,26 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      floatingActionButton: IconButton(
-        onPressed: () async {
-          if (audioService.isPlaying) {
-            await audioService.pause();
-          } else {
-            await audioService.resume();
-          }
-        },
-        icon: Icon(audioService.isPlaying ? Icons.pause : Icons.play_arrow),
-        style: ButtonStyle(
-          backgroundColor: WidgetStateProperty.all(AppColors.primaryLight),
-          padding: WidgetStateProperty.all(EdgeInsets.all(8)),
-        ),
-      ),
+      floatingActionButton: audioService.currentIndex >= 0
+          ? IconButton(
+              onPressed: () async {
+                if (audioService.isPlaying) {
+                  await audioService.pause();
+                } else {
+                  await audioService.resume();
+                }
+              },
+              icon: Icon(
+                audioService.isPlaying ? Icons.pause : Icons.play_arrow,
+              ),
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all(
+                  AppColors.primaryLight,
+                ),
+                padding: WidgetStateProperty.all(EdgeInsets.all(8)),
+              ),
+            )
+          : null,
     );
   }
 }

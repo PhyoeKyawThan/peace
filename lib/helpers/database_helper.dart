@@ -82,13 +82,13 @@ class DatabaseHelper {
     return count > 0;
   }
 
-  Future<int> updateLesson(Lesson lesson, int id) async {
+  Future<int> updateLesson(Lesson lesson) async {
     Database db = await instance.database;
     return await db.update(
       'lessons',
       Lesson.toMap(lesson),
       where: 'id = ?',
-      whereArgs: [id],
+      whereArgs: [lesson.id],
     );
   }
 
