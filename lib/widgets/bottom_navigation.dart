@@ -15,7 +15,7 @@ class BottomNavigation extends StatelessWidget {
       currentIndex: currentIndex,
       showSelectedLabels: true,
       showUnselectedLabels: false,
-      selectedItemColor: AppColors.highlightLight,
+      selectedItemColor: AppColors.accentDark,
       items: [
         _buildItem("Home", Icon(Icons.home)),
         _buildItem("Book Mark", Icon(Icons.bookmark)),

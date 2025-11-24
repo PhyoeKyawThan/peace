@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mind_peace/constants/colors.dart';
+import 'package:mind_peace/screens/book_mark.dart';
 import 'package:mind_peace/services/audio_service.dart';
 import 'package:mind_peace/screens/home.dart';
 import 'package:mind_peace/widgets/bottom_navigation.dart';
@@ -30,7 +31,7 @@ class MindPeace extends StatefulWidget {
 class _MindPeaceState extends State<MindPeace> {
   int _currentIndex = 0;
 
-  final List<Widget> _screens = [HomeScreen(), Text("this is list")];
+  final List<Widget> _screens = [HomeScreen(), BookMarkScreen()];
   void _handler(int index) {
     setState(() {
       _currentIndex = index;
@@ -40,7 +41,16 @@ class _MindPeaceState extends State<MindPeace> {
   @override
   void initState() {
     super.initState();
-    Provider.of<AudioService>(context, listen: false).loadLessons();
+    if (Provider.of<AudioService>(context, listen: false).lessonList.isEmpty) {
+      Provider.of<AudioService>(context, listen: false).loadLessons();
+    }
+
+    // if (Provider.of<AudioService>(
+    //   context,
+    //   listen: false,
+    // ).bookMarkList.isEmpty) {
+    //   Provider.of<AudioService>(context, listen: false).loadBookMark();
+    // }
     _initAudioService();
   }
 

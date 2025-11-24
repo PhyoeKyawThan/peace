@@ -7,6 +7,7 @@ class AudioService extends ChangeNotifier {
   int _currentIndex = -1;
   Lesson? _currentPlayingLesson;
   List<Lesson> _lessonList = [];
+  List<Lesson> _bookMarkList = [];
 
   final AudioPlayer _player = AudioPlayer();
   AudioService() {
@@ -20,9 +21,15 @@ class AudioService extends ChangeNotifier {
   bool get isPlaying => _player.playerState.playing;
   Lesson? get currentPlayingLesson => _currentPlayingLesson;
   List<Lesson> get lessonList => _lessonList;
+  List<Lesson> get bookMarkList => _bookMarkList;
 
   Future<void> loadLessons() async {
     _lessonList = await DatabaseHelper.instance.getAllLessons();
+    notifyListeners();
+  }
+
+  Future<void> loadBookMark() async {
+    _bookMarkList = await DatabaseHelper.instance.getBookMark();
     notifyListeners();
   }
 
@@ -54,10 +61,14 @@ class AudioService extends ChangeNotifier {
     notifyListeners();
   }
 
-  Future<void> setFav(int index) async {
+  Future<void> setBookMark(int index, {int? id}) async {
+    if (id != null) {
+      index = _lessonList.indexWhere((l) => l.id == id);
+    }
     final lesson = _lessonList[index];
-    lesson.isFav = !lesson.isFav;
+    lesson.isBookMark = !lesson.isBookMark;
     _lessonList[index] = lesson;
+
     notifyListeners();
     await DatabaseHelper.instance.updateLesson(lesson);
   }

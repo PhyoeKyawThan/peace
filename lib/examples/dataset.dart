@@ -10,7 +10,7 @@ List<Map<String, dynamic>> examples = [
         "assets/audios/Tayar Taw Myanmar - The Voice of Buddha (youtube).mp3",
     "srtPath": "assets/srt/fnt_transcript.srt",
     "imagePath": "assets/images/u_pandita.jpg",
-    "isFav": false,
+    "isBookMark": false,
   },
   {
     "title": "မေတ္တာစုတ (သဘောထားကောင်းခြင်း)",
@@ -21,7 +21,7 @@ List<Map<String, dynamic>> examples = [
         "assets/audios/Tayar Taw Myanmar - The Voice of Buddha (youtube).mp3",
     "srtPath": "https://storage.example.com/metta_sutta_subs.srt",
     "imagePath": "assets/images/ajahn_sumedho.jpg",
-    "isFav": true,
+    "isBookMark": true,
   },
   {
     "title": "အရှင်မြတ် အရှင်လမ်းရှစ်ပါး",
@@ -32,7 +32,7 @@ List<Map<String, dynamic>> examples = [
         "assets/audios/Tayar Taw Myanmar - The Voice of Buddha (youtube).mp3",
     "srtPath": "assets/srt/eightfold_path.srt",
     "imagePath": "assets/images/bhikkhu_bodhi.jpg",
-    "isFav": true,
+    "isBookMark": true,
   },
   {
     "title": "သတိထားမှတ်သားခြင်း မေဒီတေးရှင်း",
@@ -42,7 +42,7 @@ List<Map<String, dynamic>> examples = [
     "audioPath": "assets/audio/mindfulness_meditation.mp3",
     "srtPath": "assets/srt/mindfulness.srt",
     "imagePath": "assets/images/u_tejaniya.jpg",
-    "isFav": true,
+    "isBookMark": true,
   },
   {
     "title": "ကမ္မသဘာဝနှင့် ၎င်း၏ အကျိုးအမြတ်များ",
@@ -52,7 +52,7 @@ List<Map<String, dynamic>> examples = [
     "audioPath": "assets/audio/karma_consequences.mp3",
     "srtPath": "assets/srt/karma.srt",
     "imagePath": "assets/images/ajahn_chah.jpg",
-    "isFav": true,
+    "isBookMark": true,
   },
   {
     "title": "အနိစ္စ (အပြောင်းအလဲတရား)",
@@ -62,7 +62,7 @@ List<Map<String, dynamic>> examples = [
     "audioPath": "assets/audio/impermanence.mp3",
     "srtPath": "assets/srt/impermanence.srt",
     "imagePath": "assets/images/mahasi_sayadaw.jpg",
-    "isFav": true,
+    "isBookMark": true,
   },
   {
     "title": "ရွှေလေပြေးသံသတ္တိ နှလုံးသွေး",
@@ -72,7 +72,7 @@ List<Map<String, dynamic>> examples = [
     "audioPath": "assets/audio/mindfulness_breathing.mp3",
     "srtPath": "assets/srt/breathing.srt",
     "imagePath": "assets/images/ajahn_brahm.jpg",
-    "isFav": true,
+    "isBookMark": true,
   },
   {
     "title": "သီလငါးပါး",
@@ -81,7 +81,7 @@ List<Map<String, dynamic>> examples = [
     "audioPath": "assets/audio/five_precepts.mp3",
     "srtPath": "assets/srt/five_precepts.srt",
     "imagePath": "assets/images/u_jotika.jpg",
-    "isFav": true,
+    "isBookMark": true,
   },
   {
     "title": "မေတ္တသာမဏာ မေဒီတေးရှင်း",
@@ -91,7 +91,7 @@ List<Map<String, dynamic>> examples = [
     "audioPath": "assets/audio/loving_kindness.mp3",
     "srtPath": "assets/srt/loving_kindness.srt",
     "imagePath": "assets/images/bhante_gunaratana.jpg",
-    "isFav": true,
+    "isBookMark": true,
   },
   {
     "title": "အလယ်လမ်း",
@@ -101,7 +101,7 @@ List<Map<String, dynamic>> examples = [
     "audioPath": "assets/audio/middle_way.mp3",
     "srtPath": "assets/srt/middle_way.srt",
     "imagePath": "assets/images/u_narada.jpg",
-    "isFav": true,
+    "isBookMark": true,
   },
   {
     "title": "နေ့စဉ်ဘဝရှိ ကရုပြုစိတ်",
@@ -110,7 +110,7 @@ List<Map<String, dynamic>> examples = [
     "audioPath": "assets/audio/compassion_daily.mp3",
     "srtPath": "assets/srt/compassion_daily.srt",
     "imagePath": "assets/images/ajahn_pasanno.jpg",
-    "isFav": true,
+    "isBookMark": true,
   },
   {
     "title": "စကားပြောသွားတည့်ခြင်း (သမ္မာဝါစာ)",
@@ -119,7 +119,7 @@ List<Map<String, dynamic>> examples = [
     "audioPath": "assets/audio/right_speech.mp3",
     "srtPath": "assets/srt/right_speech.srt",
     "imagePath": "assets/images/u_kheminda.jpg",
-    "isFav": true,
+    "isBookMark": true,
   },
   {
     "title": "ဓမ္မပဒ ဂါထာများ",
@@ -128,7 +128,7 @@ List<Map<String, dynamic>> examples = [
     "audioPath": "assets/audio/dhammapada_verses.mp3",
     "srtPath": "assets/srt/dhammapada.srt",
     "imagePath": "assets/images/bhikkhu_analayo.jpg",
-    "isFav": true,
+    "isBookMark": true,
   },
   {
     "title": "ဥပေက္ခာ (မတုန်မလှုပ် သဘော)",
@@ -137,7 +137,7 @@ List<Map<String, dynamic>> examples = [
     "audioPath": "assets/audio/equanimity.mp3",
     "srtPath": "assets/srt/equanimity.srt",
     "imagePath": "assets/images/ajahn_sumano.jpg",
-    "isFav": true,
+    "isBookMark": true,
   },
   {
     "title": "စိတ်ပျော်ရွှင်မှု မေဒီတေးရှင်း",
@@ -147,7 +147,7 @@ List<Map<String, dynamic>> examples = [
     "audioPath": "assets/audio/joyful_meditation.mp3",
     "srtPath": "assets/srt/joyful_meditation.srt",
     "imagePath": "assets/images/venerable_hsuan_hua.jpg",
-    "isFav": true,
+    "isBookMark": true,
   },
 ];
 

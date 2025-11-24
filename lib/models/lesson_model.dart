@@ -6,7 +6,7 @@ class Lesson {
   final String audioPath;
   final String srtPath;
   final String imagePath;
-  bool isFav;
+  bool isBookMark;
 
   Lesson({
     this.id,
@@ -16,7 +16,7 @@ class Lesson {
     required this.audioPath,
     required this.srtPath,
     required this.imagePath,
-    required this.isFav,
+    required this.isBookMark,
   });
 
   factory Lesson.fromJson(Map<String, dynamic> json) {
@@ -28,7 +28,7 @@ class Lesson {
       audioPath: json['audioPath']?.toString() ?? '',
       srtPath: json['srtPath']?.toString() ?? '',
       imagePath: json['imagePath']?.toString() ?? '',
-      isFav: (json['isFav'] == 1) ? true : false,
+      isBookMark: (json['isBookMark'] == 1) ? true : false,
     );
   }
 
@@ -40,7 +40,7 @@ class Lesson {
       "audioPath": lesson.audioPath,
       "srtPath": lesson.srtPath,
       "imagePath": lesson.imagePath,
-      "isFav": lesson.isFav ? 1 : 0,
+      "isBookMark": lesson.isBookMark ? 1 : 0,
     };
   }
 }

@@ -42,10 +42,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   subtitle: Text(lesson.sayartaw),
                   textColor: AppColors.accentDark,
                   trailing: IconButton(
-                    onPressed: () => audioService.setFav(index),
+                    onPressed: () => audioService.setBookMark(index),
                     icon: Icon(Icons.bookmark),
                   ),
-                  iconColor: lesson.isFav
+                  iconColor: lesson.isBookMark
                       ? AppColors.primaryDark
                       : AppColors.textPrimaryLight,
                   onTap: () async {

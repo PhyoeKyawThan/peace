@@ -36,7 +36,7 @@ class DatabaseHelper {
         audioPath TEXT NOT NULL,
         srtPath TEXT NOT NULL,
         imagePath TEXT NOT NULL,
-        isFav INTEGER NOT NULL
+        isBookMark INTEGER NOT NULL
       )
     ''');
     await db.execute('''
@@ -71,6 +71,16 @@ class DatabaseHelper {
     Database db = await instance.database;
     final lessons = await db.query('lessons');
     return lessons.map((json) => Lesson.fromJson(json)).toList();
+  }
+
+  Future<List<Lesson>> getBookMark() async {
+    Database db = await instance.database;
+    final bookMarkLessons = await db.query(
+      "lessons",
+      where: "isBookMark = ?",
+      whereArgs: [1],
+    );
+    return bookMarkLessons.map((json) => Lesson.fromJson(json)).toList();
   }
 
   Future<bool> _checkLessonExists() async {
