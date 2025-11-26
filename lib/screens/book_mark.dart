@@ -24,10 +24,11 @@ class _BookMarkScreenState extends State<BookMarkScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "မှတ်ထားသည့် တရားတော်များ",
+          "မှတ်သားထားသည့် တရားတော်များ",
           style: TextStyle(
             color: AppColors.accentDark,
             fontWeight: FontWeight.bold,
+            fontSize: 18,
           ),
         ),
       ),

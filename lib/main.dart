@@ -43,7 +43,11 @@ class MindPeace extends StatefulWidget {
 class _MindPeaceState extends State<MindPeace> {
   int _currentIndex = 0;
 
-  final List<Widget> _screens = [HomeScreen(), BookMarkScreen()];
+  final List<Widget> _screens = [
+    HomeScreen(),
+    BookMarkScreen(),
+    // Text("New Add"),
+  ];
   void _handler(int index) {
     setState(() {
       _currentIndex = index;

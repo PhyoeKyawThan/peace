@@ -17,8 +17,9 @@ class BottomNavigation extends StatelessWidget {
       showUnselectedLabels: false,
       selectedItemColor: AppColors.accentDark,
       items: [
-        _buildItem("Home", Icon(Icons.home)),
-        _buildItem("Book Mark", Icon(Icons.bookmark)),
+        _buildItem("တရားတော်များ", Icon(Icons.temple_buddhist)),
+        _buildItem("မှတ်ထားသည်များ", Icon(Icons.bookmark)),
+        // _buildItem("တရားထည့်ရန်", Icon(Icons.save_as_rounded)),
       ],
       onTap: (index) => handler(index),
     );
