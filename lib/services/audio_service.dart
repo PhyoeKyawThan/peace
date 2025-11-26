@@ -1,24 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:just_audio/just_audio.dart';
+// import 'package:just_audio/just_audio.dart';
+import 'package:mind_peace/handler/audio_handler.dart';
 import 'package:mind_peace/helpers/database_helper.dart';
 import 'package:mind_peace/models/lesson_model.dart';
 
-class AudioService extends ChangeNotifier {
+class MyAudioService extends ChangeNotifier {
   int _currentIndex = -1;
   Lesson? _currentPlayingLesson;
   List<Lesson> _lessonList = [];
   List<Lesson> _bookMarkList = [];
 
-  final AudioPlayer _player = AudioPlayer();
-  AudioService() {
-    _player.playerStateStream.listen((state) {
+  final MyAudioHandler handler;
+  MyAudioService({required this.handler}) {
+    handler.playerStateStream.listen((state) {
       notifyListeners();
     });
   }
 
-  AudioPlayer get player => _player;
+  MyAudioHandler get player => handler;
   int get currentIndex => _currentIndex;
-  bool get isPlaying => _player.playerState.playing;
+  bool get isPlaying => handler.isPlaying;
   Lesson? get currentPlayingLesson => _currentPlayingLesson;
   List<Lesson> get lessonList => _lessonList;
   List<Lesson> get bookMarkList => _bookMarkList;
@@ -34,30 +35,30 @@ class AudioService extends ChangeNotifier {
   }
 
   Future<void> play(String path, {int? index, Lesson? lesson}) async {
-    await _player.setAsset(path);
-    await _player.play();
-
+    await handler.setAsset(path);
+    await handler.play();
     if (index != null) {
       _currentIndex = index;
     }
     if (lesson != null) {
       _currentPlayingLesson = lesson;
+      handler.addMediaItem(lesson);
     }
     await DatabaseHelper.instance.saveTrack(_currentIndex, 0);
     notifyListeners();
   }
 
   Future<void> pause() async {
-    await _player.pause();
+    await handler.pause();
     await DatabaseHelper.instance.saveTrack(
       _currentIndex,
-      _player.position.inMilliseconds,
+      handler.position.inMilliseconds,
     );
     notifyListeners();
   }
 
   Future<void> resume() async {
-    await _player.play();
+    await handler.play();
     notifyListeners();
   }
 
@@ -74,13 +75,13 @@ class AudioService extends ChangeNotifier {
   }
 
   Future<void> stop() async {
-    await _player.stop();
+    await handler.stop();
 
     notifyListeners();
   }
 
   Future<void> seek(Duration position) async {
-    await _player.seek(position);
+    await handler.seek(position);
     await DatabaseHelper.instance.saveTrack(
       _currentIndex,
       position.inMilliseconds,
@@ -96,8 +97,8 @@ class AudioService extends ChangeNotifier {
     final lastSeek = track['seek'] ?? 0;
     if (_lessonList.isNotEmpty && _currentIndex < _lessonList.length) {
       _currentPlayingLesson = _lessonList[_currentIndex];
-      await _player.setAsset(_currentPlayingLesson!.audioPath);
-      await _player.seek(Duration(milliseconds: lastSeek));
+      await handler.setAsset(_currentPlayingLesson!.audioPath);
+      await handler.seek(Duration(milliseconds: lastSeek));
     }
 
     notifyListeners();
@@ -107,9 +108,8 @@ class AudioService extends ChangeNotifier {
   void dispose() {
     DatabaseHelper.instance.saveTrack(
       currentIndex,
-      _player.position.inMilliseconds,
+      handler.position.inMilliseconds,
     );
-    _player.dispose();
     super.dispose();
   }
 }

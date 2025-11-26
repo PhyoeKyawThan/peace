@@ -17,7 +17,7 @@ class BookMarkScreen extends StatefulWidget {
 class _BookMarkScreenState extends State<BookMarkScreen> {
   @override
   Widget build(BuildContext context) {
-    final audioService = context.watch<AudioService>();
+    final audioService = context.watch<MyAudioService>();
     List<Lesson> bookMarks = audioService.lessonList
         .where((item) => item.isBookMark)
         .toList();

@@ -1,5 +1,5 @@
 class Lesson {
-  final int? id;
+  final int id;
   final String title;
   final String sayartaw;
   final String description;
@@ -9,7 +9,7 @@ class Lesson {
   bool isBookMark;
 
   Lesson({
-    this.id,
+    required this.id,
     required this.title,
     required this.sayartaw,
     required this.description,

@@ -1,15 +1,27 @@
+import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:mind_peace/constants/colors.dart';
+import 'package:mind_peace/handler/audio_handler.dart';
 import 'package:mind_peace/screens/book_mark.dart';
 import 'package:mind_peace/services/audio_service.dart';
 import 'package:mind_peace/screens/home.dart';
 import 'package:mind_peace/widgets/bottom_navigation.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+late MyAudioHandler audioHandler;
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  audioHandler = await AudioService.init(
+    builder: () => MyAudioHandler(),
+    config: const AudioServiceConfig(
+      androidNotificationChannelId: 'com.example.mind_peace',
+      androidNotificationChannelName: 'Audio Playback',
+      androidNotificationOngoing: true,
+    ),
+  );
   runApp(
     ChangeNotifierProvider(
-      create: (_) => AudioService(),
+      create: (_) => MyAudioService(handler: audioHandler),
       child: MaterialApp(
         title: 'Buddhist Lessons',
         theme: AppTheme.lightTheme,
@@ -41,8 +53,11 @@ class _MindPeaceState extends State<MindPeace> {
   @override
   void initState() {
     super.initState();
-    if (Provider.of<AudioService>(context, listen: false).lessonList.isEmpty) {
-      Provider.of<AudioService>(context, listen: false).loadLessons();
+    if (Provider.of<MyAudioService>(
+      context,
+      listen: false,
+    ).lessonList.isEmpty) {
+      Provider.of<MyAudioService>(context, listen: false).loadLessons();
     }
 
     // if (Provider.of<AudioService>(
@@ -55,7 +70,7 @@ class _MindPeaceState extends State<MindPeace> {
   }
 
   Future<void> _initAudioService() async {
-    final audioService = Provider.of<AudioService>(context, listen: false);
+    final audioService = Provider.of<MyAudioService>(context, listen: false);
     await audioService.loadLastTrack();
 
     setState(() {});

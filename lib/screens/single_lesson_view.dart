@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mind_peace/constants/colors.dart';
 import 'package:mind_peace/models/lesson_model.dart';
-import 'package:mind_peace/services/audio_service.dart';
+// import 'package:mind_peace/services/audio_service.dart';
 
 class SingleLessonView extends StatefulWidget {
   final Lesson lesson;
@@ -49,6 +49,12 @@ class _SingleLessonViewState extends State<SingleLessonView> {
                 fontSize: 16,
                 color: AppColors.textPrimaryLight,
                 fontWeight: FontWeight.w100,
+              ),
+            ),
+            SizedBox(height: 10),
+            SingleChildScrollView(
+              child: Column(
+                children: [Text("aasf"), Text("asfasdf"), Text("afdasd")],
               ),
             ),
           ],
