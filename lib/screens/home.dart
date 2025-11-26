@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mind_peace/constants/colors.dart';
 import 'package:mind_peace/dialogs/lesson_item_dialog.dart';
 import 'package:mind_peace/models/dialog_model.dart';
+import 'package:mind_peace/screens/single_lesson_view.dart';
 import 'package:mind_peace/services/audio_service.dart';
 import 'package:mind_peace/widgets/home_top_player.dart';
 import 'package:provider/provider.dart';
@@ -48,18 +49,24 @@ class _HomeScreenState extends State<HomeScreen> {
                   iconColor: lesson.isBookMark
                       ? AppColors.primaryDark
                       : AppColors.textPrimaryLight,
-                  onTap: () async {
-                    final dialogAction = await lessonItemDialog(
-                      context,
-                      lesson,
+                  onTap: () {
+                    // final dialogAction = await lessonItemDialog(
+                    //   context,
+                    //   lesson,
+                    // );
+                    // if (dialogAction == LessonDialogAction.listen) {
+                    audioService.play(
+                      lesson.audioPath,
+                      index: index,
+                      lesson: lesson,
                     );
-                    if (dialogAction == LessonDialogAction.listen) {
-                      await audioService.play(
-                        lesson.audioPath,
-                        index: index,
-                        lesson: lesson,
-                      );
-                    }
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => SingleLessonView(lesson: lesson),
+                      ),
+                    );
+                    // }
                   },
                 );
               },
