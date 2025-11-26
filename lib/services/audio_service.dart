@@ -62,12 +62,23 @@ class MyAudioService extends ChangeNotifier {
     notifyListeners();
   }
 
+  Future<void> togglePlay() async {
+    isPlaying ? await handler.pause() : await handler.play();
+  }
+
   Future<void> playNext() async {
     if (_lessonList.isEmpty) return;
     _currentIndex = (_currentIndex + 1) % _lessonList.length;
     Lesson lesson = _lessonList[_currentIndex];
     await play(lesson.audioPath, lesson: lesson);
-    notifyListeners();
+  }
+
+  Future<void> playPrevious() async {
+    if (_lessonList.isEmpty) return;
+    _currentIndex =
+        (_currentIndex - 1 + _lessonList.length) % _lessonList.length;
+    Lesson lesson = _lessonList[_currentIndex];
+    await play(lesson.audioPath, lesson: lesson);
   }
 
   Future<void> setBookMark(int index, {int? id}) async {
