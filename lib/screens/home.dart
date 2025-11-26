@@ -90,6 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 backgroundColor: WidgetStateProperty.all(
                   AppColors.primaryLight,
                 ),
+                iconSize: WidgetStateProperty.all(40),
                 padding: WidgetStateProperty.all(EdgeInsets.all(8)),
               ),
             )

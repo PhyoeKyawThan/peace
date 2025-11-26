@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marquee/marquee.dart';
 import 'package:mind_peace/constants/colors.dart';
 import 'package:mind_peace/models/lesson_model.dart';
 import 'package:mind_peace/services/audio_service.dart';
@@ -25,8 +26,8 @@ class _SingleLessonViewState extends State<SingleLessonView> {
         height: double.infinity,
         color: AppColors.secondaryLight,
         child: Column(
+          mainAxisAlignment: .spaceEvenly,
           children: [
-            SizedBox(height: 10),
             ClipRRect(
               borderRadius: BorderRadiusGeometry.circular(20),
               child: Image.asset(
@@ -36,16 +37,26 @@ class _SingleLessonViewState extends State<SingleLessonView> {
                 fit: BoxFit.cover,
               ),
             ),
-            SizedBox(height: 8),
-            Text(
-              lesson.title,
-              style: TextStyle(
-                fontSize: 20,
-                color: AppColors.textPrimaryLight,
-                fontWeight: FontWeight.bold,
+            SizedBox(
+              height: 50,
+              child: Marquee(
+                text: lesson.title,
+                style: TextStyle(
+                  fontSize: 20,
+                  // color: const Color.fromARGB(255, 248, 213, 213),
+                  fontWeight: FontWeight.bold,
+                ),
+                scrollAxis: Axis.horizontal,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                blankSpace: 40,
+                velocity: 50,
+                startPadding: 10,
+                accelerationDuration: Duration(seconds: 1),
+                accelerationCurve: Curves.linear,
+                decelerationDuration: Duration(seconds: 1),
+                decelerationCurve: Curves.easeOut,
               ),
             ),
-            SizedBox(height: 3),
             Text(
               lesson.sayartaw,
               style: TextStyle(
@@ -54,7 +65,6 @@ class _SingleLessonViewState extends State<SingleLessonView> {
                 fontWeight: FontWeight.w100,
               ),
             ),
-            SizedBox(height: 10),
 
             // SingleChildScrollView(
             //   child: Column(
@@ -65,11 +75,11 @@ class _SingleLessonViewState extends State<SingleLessonView> {
         ),
       ),
       bottomNavigationBar: Container(
-        height: 90,
-        // color: AppColors.secondaryLight,
-        color: Colors.black,
+        height: 120,
+        color: AppColors.secondaryLight,
+        // color: Colors.black,
         child: Row(
-          mainAxisAlignment: .spaceAround,
+          mainAxisAlignment: .spaceEvenly,
           children: [
             IconButton(
               onPressed: () async {
@@ -78,17 +88,22 @@ class _SingleLessonViewState extends State<SingleLessonView> {
               icon: Icon(
                 Icons.skip_previous,
                 size: 40,
-                color: AppColors.backgroundLight,
+                color: AppColors.accentLight,
               ),
             ),
             IconButton(
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all(
+                  AppColors.backgroundLight,
+                ),
+              ),
               onPressed: () async {
                 await audioService.togglePlay();
               },
               icon: Icon(
                 audioService.isPlaying ? Icons.pause : Icons.play_arrow,
-                size: 60,
-                color: AppColors.backgroundLight,
+                size: 50,
+                color: AppColors.accentLight,
               ),
             ),
             IconButton(
