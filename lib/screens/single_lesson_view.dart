@@ -3,6 +3,7 @@ import 'package:marquee/marquee.dart';
 import 'package:mind_peace/constants/colors.dart';
 import 'package:mind_peace/models/lesson_model.dart';
 import 'package:mind_peace/services/audio_service.dart';
+import 'package:mind_peace/widgets/lesson_title.dart';
 import 'package:provider/provider.dart';
 // import 'package:mind_peace/services/audio_service.dart';
 
@@ -37,25 +38,9 @@ class _SingleLessonViewState extends State<SingleLessonView> {
                 fit: BoxFit.cover,
               ),
             ),
-            SizedBox(
-              height: 50,
-              child: Marquee(
-                text: lesson.title,
-                style: TextStyle(
-                  fontSize: 20,
-                  // color: const Color.fromARGB(255, 248, 213, 213),
-                  fontWeight: FontWeight.bold,
-                ),
-                scrollAxis: Axis.horizontal,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                blankSpace: 40,
-                velocity: 50,
-                startPadding: 10,
-                accelerationDuration: Duration(seconds: 1),
-                accelerationCurve: Curves.linear,
-                decelerationDuration: Duration(seconds: 1),
-                decelerationCurve: Curves.easeOut,
-              ),
+            LessonTitle(
+              title: lesson.title,
+              maxWidth: MediaQuery.of(context).size.width - 40,
             ),
             Text(
               lesson.sayartaw,
