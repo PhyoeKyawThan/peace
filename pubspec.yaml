@@ -41,6 +41,13 @@ dependencies:
   audio_service: ^0.18.18
   marquee: ^2.3.0
   path_provider: ^2.1.5
+  flutter_native_splash: ^2.4.7
+
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/images/default.jpg
+  android: true
+  ios: true
 
 dev_dependencies:
   flutter_test:

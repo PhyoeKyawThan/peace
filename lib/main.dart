@@ -5,6 +5,7 @@ import 'package:mind_peace/handler/audio_handler.dart';
 import 'package:mind_peace/helpers/database_helper.dart';
 import 'package:mind_peace/helpers/external_storage.dart';
 import 'package:mind_peace/screens/book_mark.dart';
+import 'package:mind_peace/screens/tayar_list.dart';
 import 'package:mind_peace/services/audio_service.dart';
 import 'package:mind_peace/screens/home.dart';
 import 'package:mind_peace/widgets/bottom_navigation.dart';
@@ -48,8 +49,8 @@ class _MindPeaceState extends State<MindPeace> {
 
   final List<Widget> _screens = [
     HomeScreen(),
+    TayarListScreen(),
     BookMarkScreen(),
-    // Text("New Add"),
   ];
   void _handler(int index) {
     setState(() {
