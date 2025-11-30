@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:marquee/marquee.dart';
 import 'package:mind_peace/constants/colors.dart';
 import 'package:mind_peace/models/lesson_model.dart';
 import 'package:mind_peace/services/audio_service.dart';
