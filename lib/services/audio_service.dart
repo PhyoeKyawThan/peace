@@ -35,7 +35,7 @@ class MyAudioService extends ChangeNotifier {
   }
 
   Future<void> play(String path, {int? index, Lesson? lesson}) async {
-    await handler.setAsset(path);
+    await handler.setFilePath(path);
     await handler.play();
     if (index != null) {
       _currentIndex = index;
@@ -116,7 +116,7 @@ class MyAudioService extends ChangeNotifier {
     final lastSeek = track['seek'] ?? 0;
     if (_lessonList.isNotEmpty && _currentIndex < _lessonList.length) {
       _currentPlayingLesson = _lessonList[_currentIndex];
-      await handler.setAsset(_currentPlayingLesson!.audioPath);
+      await handler.setFilePath(_currentPlayingLesson!.audioPath);
       await handler.seek(Duration(milliseconds: lastSeek));
     }
 

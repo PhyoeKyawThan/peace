@@ -43,3 +43,7 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+/assets/audios
+audio_list.json
+new_audio_list.json
+rename.py

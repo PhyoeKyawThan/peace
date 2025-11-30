@@ -2,153 +2,242 @@ import 'package:mind_peace/models/lesson_model.dart';
 
 List<Map<String, dynamic>> examples = [
   {
-    "title": "အကြောင်းအရာလေးခု သမ္မတသိသွင်",
-    "sayartaw": "ဗုဒ္ဓိသိန်တော် ဆရာတော်ဦးပန္တိတ",
+    "title":
+        "\u1015\u100b\u1039\u100c\u102c\u1014\u103a\u1038\u1021\u1019\u103d\u103e\u1014\u103a\u1038\u1015\u102b\u1020\u102d\u1010\u1031\u102c\u103a",
+    "sayartaw":
+        "\u1019\u1004\u103a\u1038\u1000\u103d\u1014\u103a\u1038\u1006\u101b\u102c\u1010\u1031\u102c\u103a  \u1026\u1038\u101d\u102d\u1005\u102d\u1010\u1039\u1010\u101e\u102c\u101b\u102c\u1018\u102d\u101d\u1036\u101e",
     "description":
-        "ဗုဒ္ဓဘာသာ၏ အခြေခံသီရိဝင် အယူအဆများကို ဝင်ရိုးအဖြစ်ရှင်းလင်းပြောကြားထားသော အဆိုအထားပါသည်။",
-    "audioPath":
-        "assets/audios/Tayar Taw Myanmar - The Voice of Buddha (youtube).mp3",
-    "srtPath": "assets/srt/fnt_transcript.srt",
-    "imagePath": "assets/images/u_pandita.jpg",
+        "\u1017\u102f\u1012\u1039\u1013\u1018\u102c\u101e\u102c\u104f \u1021\u1001\u103c\u1031\u1001\u1036\u101e\u102e\u101b\u102d\u101d\u1004\u103a \u1021\u101a\u1030\u1021\u1006\u1019\u103b\u102c\u1038\u1000\u102d\u102f \u101d\u1004\u103a\u101b\u102d\u102f\u1038\u1021\u1016\u103c\u1005\u103a\u101b\u103e\u1004\u103a\u1038\u101c\u1004\u103a\u1038\u1015\u103c\u1031\u102c\u1000\u103c\u102c\u1038\u1011\u102c\u1038\u101e\u1031\u102c \u1021\u1006\u102d\u102f\u1021\u1011\u102c\u1038\u1015\u102b\u101e\u100a\u103a\u104b",
+    "audioPath": "89b46b59-e650-45ff-a986-4c5d3ec831b9.ogg",
+    "srtPath": null,
+    "imagePath": null,
     "isBookMark": false,
   },
   {
-    "title": "မေတ္တာစုတ (သဘောထားကောင်းခြင်း)",
-    "sayartaw": "အဇန်း ဆုမေဒေါ",
+    "title":
+        "\u1015\u100b\u1039\u100c\u102c\u1014\u103a\u1038\u1015\u102b\u1020\u102d\u1010\u1031\u102c\u103a \u1021\u1014\u1031\u1000\u1007\u102c\u1010\u1004\u103a \u1010\u101b\u102c\u1038",
+    "sayartaw": "\u1026\u1038\u1009\u102c\u100f\u102d\u103f\u101b",
     "description":
-        "ကမ္ဘာလုံးဆိုင်ရာ မေတ္တာကို တိုးတက်ဖွံ့ဖြိုးစေခြင်းအတွက် ချေးမြွှေသံဖြစ်သော တိုတိုကပြောကြားမှု။",
-    "audioPath":
-        "assets/audios/Tayar Taw Myanmar - The Voice of Buddha (youtube).mp3",
-    "srtPath": "https://storage.example.com/metta_sutta_subs.srt",
-    "imagePath": "assets/images/ajahn_sumedho.jpg",
-    "isBookMark": true,
+        "\u1017\u102f\u1012\u1039\u1013\u1018\u102c\u101e\u102c\u104f \u1021\u1001\u103c\u1031\u1001\u1036\u101e\u102e\u101b\u102d\u101d\u1004\u103a \u1021\u101a\u1030\u1021\u1006\u1019\u103b\u102c\u1038\u1000\u102d\u102f \u101d\u1004\u103a\u101b\u102d\u102f\u1038\u1021\u1016\u103c\u1005\u103a\u101b\u103e\u1004\u103a\u1038\u101c\u1004\u103a\u1038\u1015\u103c\u1031\u102c\u1000\u103c\u102c\u1038\u1011\u102c\u1038\u101e\u1031\u102c \u1021\u1006\u102d\u102f\u1021\u1011\u102c\u1038\u1015\u102b\u101e\u100a\u103a\u104b",
+    "audioPath": "9c9c51ad-2e60-49eb-95b8-ccdae92fd052.ogg",
+    "srtPath": null,
+    "imagePath": null,
+    "isBookMark": false,
   },
   {
-    "title": "အရှင်မြတ် အရှင်လမ်းရှစ်ပါး",
-    "sayartaw": "ဘိက္ခု ဘောဓိ",
+    "title":
+        "\u1015\u100b\u1039\u100c\u102c\u1014\u103a\u1038\u1015\u102b\u1020\u102d\u1010\u1031\u102c\u103a \u1013\u102c\u101b\u100f\u1015\u101b\u102d\u1010\u103a\u1010\u1031\u102c\u103a",
+    "sayartaw":
+        "\u1000\u103c\u102c\u1014\u102e\u1000\u1014\u103a\u1006\u101b\u102c\u1010\u1031\u102c\u103a \u1026\u1038\u1007\u100b\u102d\u101c",
     "description":
-        "မြင်ကွင်းကောင်းမွန်မှုနှင့် စိတ်တော်ကောင်းမွန်မှုတို့ကို သိမြင်အလင်းသို့ နည်းလမ်းညွှန်သည့် ကမ္မာဝါဒီလမ်းညွှန်။",
-    "audioPath":
-        "assets/audios/Tayar Taw Myanmar - The Voice of Buddha (youtube).mp3",
-    "srtPath": "assets/srt/eightfold_path.srt",
-    "imagePath": "assets/images/bhikkhu_bodhi.jpg",
-    "isBookMark": true,
+        "\u1017\u102f\u1012\u1039\u1013\u1018\u102c\u101e\u102c\u104f \u1021\u1001\u103c\u1031\u1001\u1036\u101e\u102e\u101b\u102d\u101d\u1004\u103a \u1021\u101a\u1030\u1021\u1006\u1019\u103b\u102c\u1038\u1000\u102d\u102f \u101d\u1004\u103a\u101b\u102d\u102f\u1038\u1021\u1016\u103c\u1005\u103a\u101b\u103e\u1004\u103a\u1038\u101c\u1004\u103a\u1038\u1015\u103c\u1031\u102c\u1000\u103c\u102c\u1038\u1011\u102c\u1038\u101e\u1031\u102c \u1021\u1006\u102d\u102f\u1021\u1011\u102c\u1038\u1015\u102b\u101e\u100a\u103a\u104b",
+    "audioPath": "8863dc3e-20ed-4111-a15a-ce07cb075d50.ogg",
+    "srtPath": null,
+    "imagePath": null,
+    "isBookMark": false,
   },
   {
-    "title": "သတိထားမှတ်သားခြင်း မေဒီတေးရှင်း",
-    "sayartaw": "ဆရာတော်ဦးတေဇာညိန်း",
+    "title": "\u1026\u1038\u101d\u101b\u1040",
+    "sayartaw":
+        "\u1013\u1019\u1039\u1019\u1005\u1000\u103c\u102c \u1010\u101b\u102c\u1038\u1010\u1031\u102c\u103a",
     "description":
-        "အများပြည်သူအတွက် သဘာဝအလေးအနေအထားကို သတိပြုစေသည့် အကြံဉာဏ်များ။",
-    "audioPath": "assets/audio/mindfulness_meditation.mp3",
-    "srtPath": "assets/srt/mindfulness.srt",
-    "imagePath": "assets/images/u_tejaniya.jpg",
-    "isBookMark": true,
+        "\u1017\u102f\u1012\u1039\u1013\u1018\u102c\u101e\u102c\u104f \u1021\u1001\u103c\u1031\u1001\u1036\u101e\u102e\u101b\u102d\u101d\u1004\u103a \u1021\u101a\u1030\u1021\u1006\u1019\u103b\u102c\u1038\u1000\u102d\u102f \u101d\u1004\u103a\u101b\u102d\u102f\u1038\u1021\u1016\u103c\u1005\u103a\u101b\u103e\u1004\u103a\u1038\u101c\u1004\u103a\u1038\u1015\u103c\u1031\u102c\u1000\u103c\u102c\u1038\u1011\u102c\u1038\u101e\u1031\u102c \u1021\u1006\u102d\u102f\u1021\u1011\u102c\u1038\u1015\u102b\u101e\u100a\u103a\u104b",
+    "audioPath": "65790a37-4d18-4d31-88fd-10b1584e7cc0.ogg",
+    "srtPath": null,
+    "imagePath": null,
+    "isBookMark": false,
   },
   {
-    "title": "ကမ္မသဘာဝနှင့် ၎င်း၏ အကျိုးအမြတ်များ",
-    "sayartaw": "အဇန်းခါ",
+    "title":
+        "\u1019\u102d\u102f\u1038\u1000\u102f\u1010\u103a \u1000\u1019\u1039\u1019\u100b\u1039\u100c\u102c\u1014\u102c\u1005\u101b\u102d\u101a",
+    "sayartaw": "",
     "description":
-        "ကြောင်းတရားအရ ကမ္မအကျိုးအမြတ်ကို နားလည်သိမြင်စေသည့် သဘောတရား။",
-    "audioPath": "assets/audio/karma_consequences.mp3",
-    "srtPath": "assets/srt/karma.srt",
-    "imagePath": "assets/images/ajahn_chah.jpg",
-    "isBookMark": true,
+        "\u1017\u102f\u1012\u1039\u1013\u1018\u102c\u101e\u102c\u104f \u1021\u1001\u103c\u1031\u1001\u1036\u101e\u102e\u101b\u102d\u101d\u1004\u103a \u1021\u101a\u1030\u1021\u1006\u1019\u103b\u102c\u1038\u1000\u102d\u102f \u101d\u1004\u103a\u101b\u102d\u102f\u1038\u1021\u1016\u103c\u1005\u103a\u101b\u103e\u1004\u103a\u1038\u101c\u1004\u103a\u1038\u1015\u103c\u1031\u102c\u1000\u103c\u102c\u1038\u1011\u102c\u1038\u101e\u1031\u102c \u1021\u1006\u102d\u102f\u1021\u1011\u102c\u1038\u1015\u102b\u101e\u100a\u103a\u104b",
+    "audioPath": "97c09104-a3fe-4950-ad23-3b48778580d9.ogg",
+    "srtPath": null,
+    "imagePath": null,
+    "isBookMark": false,
   },
   {
-    "title": "အနိစ္စ (အပြောင်းအလဲတရား)",
-    "sayartaw": "မဟာဆရာတော် ဦးမဟာဆိ",
+    "title": "\u1026\u1038\u1000\u101d\u102d\u1013\u1007",
+    "sayartaw":
+        "\u1015\u101b\u102d\u1010\u103a\u104a \u1015\u1020\u102c\u1014\u103a\u1038\u104a \u1013\u1019\u1039\u1019\u1005\u1000\u103c\u102c",
     "description":
-        "အရာအားလုံးသည် မတည်မြဲကြောင်း သဘောတရားကို ရှင်းလင်းပြောကြားခြင်း။",
-    "audioPath": "assets/audio/impermanence.mp3",
-    "srtPath": "assets/srt/impermanence.srt",
-    "imagePath": "assets/images/mahasi_sayadaw.jpg",
-    "isBookMark": true,
+        "\u1017\u102f\u1012\u1039\u1013\u1018\u102c\u101e\u102c\u104f \u1021\u1001\u103c\u1031\u1001\u1036\u101e\u102e\u101b\u102d\u101d\u1004\u103a \u1021\u101a\u1030\u1021\u1006\u1019\u103b\u102c\u1038\u1000\u102d\u102f \u101d\u1004\u103a\u101b\u102d\u102f\u1038\u1021\u1016\u103c\u1005\u103a\u101b\u103e\u1004\u103a\u1038\u101c\u1004\u103a\u1038\u1015\u103c\u1031\u102c\u1000\u103c\u102c\u1038\u1011\u102c\u1038\u101e\u1031\u102c \u1021\u1006\u102d\u102f\u1021\u1011\u102c\u1038\u1015\u102b\u101e\u100a\u103a\u104b",
+    "audioPath": "585a29a7-ffc9-4c40-8f80-c9009d937c4c.ogg",
+    "srtPath": null,
+    "imagePath": null,
+    "isBookMark": false,
   },
   {
-    "title": "ရွှေလေပြေးသံသတ္တိ နှလုံးသွေး",
-    "sayartaw": "အဇန်း ဘရာဟမ်",
+    "title":
+        "\u1019\u1004\u103a\u1038\u1000\u103d\u1014\u103a\u1038\u1006\u101b\u102c\u1010\u1031\u102c\u103a \u1026\u1038\u101d\u102d\u1005\u102d\u1010\u1039\u1010\u101e\u102c\u101b\u102c\u1018\u102d\u101d\u1036\u101e",
+    "sayartaw":
+        "\u1013\u1019\u1039\u1019\u1005\u1000\u103c\u102c\u1010\u101b\u102c\u1038\u1010\u1031\u102c\u103a (\u1019\u103c\u1014\u103a\u1019\u102c\u1015\u103c\u1014\u103a -\u1041)",
     "description":
-        "ဦးရှိုင်းရွှေလေပြေးသတ္တိဖြင့် ဗဟုသုတပေးသည့် အသက်ရှူသတ်မှတ်ခြင်း လေ့ကျင့်နည်း။",
-    "audioPath": "assets/audio/mindfulness_breathing.mp3",
-    "srtPath": "assets/srt/breathing.srt",
-    "imagePath": "assets/images/ajahn_brahm.jpg",
-    "isBookMark": true,
+        "\u1017\u102f\u1012\u1039\u1013\u1018\u102c\u101e\u102c\u104f \u1021\u1001\u103c\u1031\u1001\u1036\u101e\u102e\u101b\u102d\u101d\u1004\u103a \u1021\u101a\u1030\u1021\u1006\u1019\u103b\u102c\u1038\u1000\u102d\u102f \u101d\u1004\u103a\u101b\u102d\u102f\u1038\u1021\u1016\u103c\u1005\u103a\u101b\u103e\u1004\u103a\u1038\u101c\u1004\u103a\u1038\u1015\u103c\u1031\u102c\u1000\u103c\u102c\u1038\u1011\u102c\u1038\u101e\u1031\u102c \u1021\u1006\u102d\u102f\u1021\u1011\u102c\u1038\u1015\u102b\u101e\u100a\u103a\u104b",
+    "audioPath": "7d0198eb-f352-4416-9c57-dbd9bda232a1.ogg",
+    "srtPath": null,
+    "imagePath": null,
+    "isBookMark": false,
   },
   {
-    "title": "သီလငါးပါး",
-    "sayartaw": "ဆရာတော်ဦးဂျိုတိကာ",
-    "description": "ဂါထာငါးပါးကို စောင့်ထိန်းရသည့် သီလတရားဆိုင်ရာ အကြောင်းအရာ။",
-    "audioPath": "assets/audio/five_precepts.mp3",
-    "srtPath": "assets/srt/five_precepts.srt",
-    "imagePath": "assets/images/u_jotika.jpg",
-    "isBookMark": true,
-  },
-  {
-    "title": "မေတ္တသာမဏာ မေဒီတေးရှင်း",
-    "sayartaw": "ဘန္တေ ဂုနရာဋနာ",
+    "title": "\u1026\u1038\u1025\u1010\u1039\u1010\u1019\u101e\u102c\u101b",
+    "sayartaw":
+        "\u1015\u101b\u102d\u1010\u103a\u1000\u103c\u102e\u1038(\u1041\u1041)\u101e\u102f\u1010\u103a\u104a  \u101b\u1031\u1006\u1030\u1015\u101b\u102d\u1010\u103a\u104a \u1002\u102f\u100f\u103a\u1010\u1031\u102c\u103a\u1000\u103d\u1014\u103a\u1001\u103c\u102c\u104a \u1000\u1019\u1039\u1019\u101d\u102b",
     "description":
-        "တရားတော်အသက်ရှင်သမျှကို မေတ္တာစိတ်ဖြင့် ပူဇော်ကာ သနပ်ခါတရားတိုးချဲ့နည်း။",
-    "audioPath": "assets/audio/loving_kindness.mp3",
-    "srtPath": "assets/srt/loving_kindness.srt",
-    "imagePath": "assets/images/bhante_gunaratana.jpg",
-    "isBookMark": true,
+        "\u1017\u102f\u1012\u1039\u1013\u1018\u102c\u101e\u102c\u104f \u1021\u1001\u103c\u1031\u1001\u1036\u101e\u102e\u101b\u102d\u101d\u1004\u103a \u1021\u101a\u1030\u1021\u1006\u1019\u103b\u102c\u1038\u1000\u102d\u102f \u101d\u1004\u103a\u101b\u102d\u102f\u1038\u1021\u1016\u103c\u1005\u103a\u101b\u103e\u1004\u103a\u1038\u101c\u1004\u103a\u1038\u1015\u103c\u1031\u102c\u1000\u103c\u102c\u1038\u1011\u102c\u1038\u101e\u1031\u102c \u1021\u1006\u102d\u102f\u1021\u1011\u102c\u1038\u1015\u102b\u101e\u100a\u103a\u104b",
+    "audioPath": "68f6d30c-5f06-4680-a62e-9b70c3518b8c.ogg",
+    "srtPath": null,
+    "imagePath": null,
+    "isBookMark": false,
   },
   {
-    "title": "အလယ်လမ်း",
-    "sayartaw": "ဗုဒ္ဓိသိန်တော် ဦးနာရဒ",
+    "title": "\u1026\u1038\u1009\u102c\u100f\u102d\u103f\u101b",
+    "sayartaw":
+        "\u1015\u101b\u102d\u1010\u103a\u1000\u103c\u102e\u1038(\u1041\u1041)\u101e\u102f\u1010\u103a\u104a \u1015\u102b\u1020\u102d\u1021\u1014\u1000\u103a  (\u1041)",
     "description":
-        "ဝမခြိမ်းမယှား သာယာသိတျတည်ရှိသော လမ်းစဉ်ကို ရှင်းလင်းဖော်ပြခြင်း။",
-    "audioPath": "assets/audio/middle_way.mp3",
-    "srtPath": "assets/srt/middle_way.srt",
-    "imagePath": "assets/images/u_narada.jpg",
-    "isBookMark": true,
+        "\u1017\u102f\u1012\u1039\u1013\u1018\u102c\u101e\u102c\u104f \u1021\u1001\u103c\u1031\u1001\u1036\u101e\u102e\u101b\u102d\u101d\u1004\u103a \u1021\u101a\u1030\u1021\u1006\u1019\u103b\u102c\u1038\u1000\u102d\u102f \u101d\u1004\u103a\u101b\u102d\u102f\u1038\u1021\u1016\u103c\u1005\u103a\u101b\u103e\u1004\u103a\u1038\u101c\u1004\u103a\u1038\u1015\u103c\u1031\u102c\u1000\u103c\u102c\u1038\u1011\u102c\u1038\u101e\u1031\u102c \u1021\u1006\u102d\u102f\u1021\u1011\u102c\u1038\u1015\u102b\u101e\u100a\u103a\u104b",
+    "audioPath": "96d353cb-6799-48f6-96c0-f19372ae2870.ogg",
+    "srtPath": null,
+    "imagePath": null,
+    "isBookMark": false,
   },
   {
-    "title": "နေ့စဉ်ဘဝရှိ ကရုပြုစိတ်",
-    "sayartaw": "အဇန်း ပသန်နို",
-    "description": "နေ့စဉ်ဘဝတွင် ကရုပြုစိတ်တရားကို ကျင့်သုံးပုံများ။",
-    "audioPath": "assets/audio/compassion_daily.mp3",
-    "srtPath": "assets/srt/compassion_daily.srt",
-    "imagePath": "assets/images/ajahn_pasanno.jpg",
-    "isBookMark": true,
-  },
-  {
-    "title": "စကားပြောသွားတည့်ခြင်း (သမ္မာဝါစာ)",
-    "sayartaw": "ဆရာတော်ဦးခေမင်ဒါ",
-    "description": "စကားပြောသွားတည့်ခြင်းနှင့် သတိပြုစကားပြောခြင်းအရေးပါမှု။",
-    "audioPath": "assets/audio/right_speech.mp3",
-    "srtPath": "assets/srt/right_speech.srt",
-    "imagePath": "assets/images/u_kheminda.jpg",
-    "isBookMark": true,
-  },
-  {
-    "title": "ဓမ္မပဒ ဂါထာများ",
-    "sayartaw": "ဘိက္ခု အနလာယော",
-    "description": "ဓမ္မပဒမှ ရွေးချယ်ထားသော ဂါထာများနှင့် ဖော်ပြချက်များ။",
-    "audioPath": "assets/audio/dhammapada_verses.mp3",
-    "srtPath": "assets/srt/dhammapada.srt",
-    "imagePath": "assets/images/bhikkhu_analayo.jpg",
-    "isBookMark": true,
-  },
-  {
-    "title": "ဥပေက္ခာ (မတုန်မလှုပ် သဘော)",
-    "sayartaw": "အဇန်း စုမာနို",
-    "description": "စိတ်မြဲမြံ၍ မတုန်မလှုပ်တဲ့ ဥပေက္ခာအတတ်ပညာကို တည်ဆောက်နည်း။",
-    "audioPath": "assets/audio/equanimity.mp3",
-    "srtPath": "assets/srt/equanimity.srt",
-    "imagePath": "assets/images/ajahn_sumano.jpg",
-    "isBookMark": true,
-  },
-  {
-    "title": "စိတ်ပျော်ရွှင်မှု မေဒီတေးရှင်း",
-    "sayartaw": "ဗုဒ္ဓိသိန်တော် ဆွမ်ဟဝါ",
+    "title":
+        "\u1019\u101f\u102c\u1005\u100a\u103a\u1006\u101b\u102c\u1010\u1031\u102c\u103a \u1026\u1038\u101e\u1031\u102c\u1018\u1014",
+    "sayartaw":
+        "\u1015\u101b\u102d\u1010\u103a\u1000\u103c\u102e\u1038(\u1041\u1041)\u101e\u102f\u1010\u103a\u104a",
     "description":
-        "မေဒီတေးရှင်းလေ့ကျင့်ခြင်းမှ တစ်ဆင့် ပျော်ရွှင်မှုကို တိုးတက်စေသော သဘောတရား။",
-    "audioPath": "assets/audio/joyful_meditation.mp3",
-    "srtPath": "assets/srt/joyful_meditation.srt",
-    "imagePath": "assets/images/venerable_hsuan_hua.jpg",
-    "isBookMark": true,
+        "\u1017\u102f\u1012\u1039\u1013\u1018\u102c\u101e\u102c\u104f \u1021\u1001\u103c\u1031\u1001\u1036\u101e\u102e\u101b\u102d\u101d\u1004\u103a \u1021\u101a\u1030\u1021\u1006\u1019\u103b\u102c\u1038\u1000\u102d\u102f \u101d\u1004\u103a\u101b\u102d\u102f\u1038\u1021\u1016\u103c\u1005\u103a\u101b\u103e\u1004\u103a\u1038\u101c\u1004\u103a\u1038\u1015\u103c\u1031\u102c\u1000\u103c\u102c\u1038\u1011\u102c\u1038\u101e\u1031\u102c \u1021\u1006\u102d\u102f\u1021\u1011\u102c\u1038\u1015\u102b\u101e\u100a\u103a\u104b",
+    "audioPath": "87441ff3-e9cd-47f2-a6bd-29f84c5d9fd2.ogg",
+    "srtPath": null,
+    "imagePath": null,
+    "isBookMark": false,
+  },
+  {
+    "title": "\u1026\u1038\u1000\u102f\u100f\u1039\u100d\u101c",
+    "sayartaw":
+        "\u1015\u101b\u102d\u1010\u103a\u1000\u103c\u102e\u1038(\u1041\u1041)\u101e\u102f\u1010\u103a\u104a \u1015\u102b\u1020\u102d\u1021\u1014\u1000\u103a",
+    "description":
+        "\u1017\u102f\u1012\u1039\u1013\u1018\u102c\u101e\u102c\u104f \u1021\u1001\u103c\u1031\u1001\u1036\u101e\u102e\u101b\u102d\u101d\u1004\u103a \u1021\u101a\u1030\u1021\u1006\u1019\u103b\u102c\u1038\u1000\u102d\u102f \u101d\u1004\u103a\u101b\u102d\u102f\u1038\u1021\u1016\u103c\u1005\u103a\u101b\u103e\u1004\u103a\u1038\u101c\u1004\u103a\u1038\u1015\u103c\u1031\u102c\u1000\u103c\u102c\u1038\u1011\u102c\u1038\u101e\u1031\u102c \u1021\u1006\u102d\u102f\u1021\u1011\u102c\u1038\u1015\u102b\u101e\u100a\u103a\u104b",
+    "audioPath": "c978e32d-59b4-48a7-b851-5c551145824a.ogg",
+    "srtPath": null,
+    "imagePath": null,
+    "isBookMark": false,
+  },
+  {
+    "title":
+        "\u1000\u103c\u102c\u1014\u102e\u1000\u1014\u103a\u1006\u101b\u102c\u1010\u1031\u102c\u103a \u1026\u1007\u100b\u102d\u101c",
+    "sayartaw":
+        "\u1015\u101b\u102d\u1010\u103a\u1000\u103c\u102e\u1038(\u1041\u1041)\u101e\u102f\u1010\u103a\u104a",
+    "description":
+        "\u1017\u102f\u1012\u1039\u1013\u1018\u102c\u101e\u102c\u104f \u1021\u1001\u103c\u1031\u1001\u1036\u101e\u102e\u101b\u102d\u101d\u1004\u103a \u1021\u101a\u1030\u1021\u1006\u1019\u103b\u102c\u1038\u1000\u102d\u102f \u101d\u1004\u103a\u101b\u102d\u102f\u1038\u1021\u1016\u103c\u1005\u103a\u101b\u103e\u1004\u103a\u1038\u101c\u1004\u103a\u1038\u1015\u103c\u1031\u102c\u1000\u103c\u102c\u1038\u1011\u102c\u1038\u101e\u1031\u102c \u1021\u1006\u102d\u102f\u1021\u1011\u102c\u1038\u1015\u102b\u101e\u100a\u103a\u104b",
+    "audioPath": "4ab8e36e-afc0-45ee-999b-73fea0f341d0.ogg",
+    "srtPath": null,
+    "imagePath": null,
+    "isBookMark": false,
+  },
+  {
+    "title": "\u1026\u1038\u1014\u101b\u1015\u1010\u102d",
+    "sayartaw":
+        "\u1015\u101b\u102d\u1010\u103a\u1000\u103c\u102e\u1038(\u1041\u1041)\u101e\u102f\u1010\u103a\u104a",
+    "description":
+        "\u1017\u102f\u1012\u1039\u1013\u1018\u102c\u101e\u102c\u104f \u1021\u1001\u103c\u1031\u1001\u1036\u101e\u102e\u101b\u102d\u101d\u1004\u103a \u1021\u101a\u1030\u1021\u1006\u1019\u103b\u102c\u1038\u1000\u102d\u102f \u101d\u1004\u103a\u101b\u102d\u102f\u1038\u1021\u1016\u103c\u1005\u103a\u101b\u103e\u1004\u103a\u1038\u101c\u1004\u103a\u1038\u1015\u103c\u1031\u102c\u1000\u103c\u102c\u1038\u1011\u102c\u1038\u101e\u1031\u102c \u1021\u1006\u102d\u102f\u1021\u1011\u102c\u1038\u1015\u102b\u101e\u100a\u103a\u104b",
+    "audioPath": "04405ef3-0cbf-4c3b-8f42-c622c8db88b8.ogg",
+    "srtPath": null,
+    "imagePath": null,
+    "isBookMark": false,
+  },
+  {
+    "title": "\u1026\u1038\u1007\u101d\u1014",
+    "sayartaw":
+        "\u1015\u101b\u102d\u1010\u103a\u1000\u103c\u102e\u1038(\u1041\u1041)\u101e\u102f\u1010\u103a\u104a",
+    "description":
+        "\u1017\u102f\u1012\u1039\u1013\u1018\u102c\u101e\u102c\u104f \u1021\u1001\u103c\u1031\u1001\u1036\u101e\u102e\u101b\u102d\u101d\u1004\u103a \u1021\u101a\u1030\u1021\u1006\u1019\u103b\u102c\u1038\u1000\u102d\u102f \u101d\u1004\u103a\u101b\u102d\u102f\u1038\u1021\u1016\u103c\u1005\u103a\u101b\u103e\u1004\u103a\u1038\u101c\u1004\u103a\u1038\u1015\u103c\u1031\u102c\u1000\u103c\u102c\u1038\u1011\u102c\u1038\u101e\u1031\u102c \u1021\u1006\u102d\u102f\u1021\u1011\u102c\u1038\u1015\u102b\u101e\u100a\u103a\u104b",
+    "audioPath": "25af726a-f5ed-473e-a1ff-fd71c2dc6c41.ogg",
+    "srtPath": null,
+    "imagePath": null,
+    "isBookMark": false,
+  },
+  {
+    "title":
+        "\u1021\u101b\u103e\u1004\u103a\u1007\u1014\u1000\u102c\u1018\u102d\u101d\u1036\u101e",
+    "sayartaw":
+        "\u1015\u101b\u102d\u1010\u103a\u1000\u103c\u102e\u1038\u104a \u1013\u1019\u1039\u1019\u1005\u1000\u103c\u102c\u104a \u1021\u1014\u1010\u1039\u1010\u101c\u1000\u1039\u1001\u100f\u101e\u102f\u1010\u103a\u104a",
+    "description":
+        "\u1017\u102f\u1012\u1039\u1013\u1018\u102c\u101e\u102c\u104f \u1021\u1001\u103c\u1031\u1001\u1036\u101e\u102e\u101b\u102d\u101d\u1004\u103a \u1021\u101a\u1030\u1021\u1006\u1019\u103b\u102c\u1038\u1000\u102d\u102f \u101d\u1004\u103a\u101b\u102d\u102f\u1038\u1021\u1016\u103c\u1005\u103a\u101b\u103e\u1004\u103a\u1038\u101c\u1004\u103a\u1038\u1015\u103c\u1031\u102c\u1000\u103c\u102c\u1038\u1011\u102c\u1038\u101e\u1031\u102c \u1021\u1006\u102d\u102f\u1021\u1011\u102c\u1038\u1015\u102b\u101e\u100a\u103a\u104b",
+    "audioPath": "62a96008-0b05-487a-82f5-c204c5cd39ac.ogg",
+    "srtPath": null,
+    "imagePath": null,
+    "isBookMark": false,
+  },
+  {
+    "title":
+        "\u1016\u102c\u1038\u1021\u1031\u102c\u1000\u103a\u1010\u1031\u102c\u101b\u1006\u101b\u102c\u1010\u1031\u102c\u103a\u1000\u103c\u102e\u1038 \u1018\u1012\u1039\u1012\u1014\u1039\u1010\u1021\u102c\u1005\u102d\u100f\u1039\u100f",
+    "sayartaw":
+        "\u1015\u101b\u102d\u1010\u103a\u1000\u103c\u102e\u1038(\u1041\u1041)\u101e\u102f\u1010\u103a\u104a",
+    "description":
+        "\u1017\u102f\u1012\u1039\u1013\u1018\u102c\u101e\u102c\u104f \u1021\u1001\u103c\u1031\u1001\u1036\u101e\u102e\u101b\u102d\u101d\u1004\u103a \u1021\u101a\u1030\u1021\u1006\u1019\u103b\u102c\u1038\u1000\u102d\u102f \u101d\u1004\u103a\u101b\u102d\u102f\u1038\u1021\u1016\u103c\u1005\u103a\u101b\u103e\u1004\u103a\u1038\u101c\u1004\u103a\u1038\u1015\u103c\u1031\u102c\u1000\u103c\u102c\u1038\u1011\u102c\u1038\u101e\u1031\u102c \u1021\u1006\u102d\u102f\u1021\u1011\u102c\u1038\u1015\u102b\u101e\u100a\u103a\u104b",
+    "audioPath": "13c43ec1-6667-446f-a0b5-bcd1cd9242df.ogg",
+    "srtPath": null,
+    "imagePath": null,
+    "isBookMark": false,
+  },
+  {
+    "title":
+        "\u101e\u102e\u1010\u1002\u1030\u1006\u101b\u102c\u1010\u1031\u102c\u103a\u1018\u102f\u101b\u102c\u1038\u1000\u103c\u102e\u1038",
+    "sayartaw": "",
+    "description":
+        "\u1017\u102f\u1012\u1039\u1013\u1018\u102c\u101e\u102c\u104f \u1021\u1001\u103c\u1031\u1001\u1036\u101e\u102e\u101b\u102d\u101d\u1004\u103a \u1021\u101a\u1030\u1021\u1006\u1019\u103b\u102c\u1038\u1000\u102d\u102f \u101d\u1004\u103a\u101b\u102d\u102f\u1038\u1021\u1016\u103c\u1005\u103a\u101b\u103e\u1004\u103a\u1038\u101c\u1004\u103a\u1038\u1015\u103c\u1031\u102c\u1000\u103c\u102c\u1038\u1011\u102c\u1038\u101e\u1031\u102c \u1021\u1006\u102d\u102f\u1021\u1011\u102c\u1038\u1015\u102b\u101e\u100a\u103a\u104b",
+    "audioPath": "891e7b08-2511-4bd9-bb18-84365a551b84.ogg",
+    "srtPath": null,
+    "imagePath": null,
+    "isBookMark": false,
+  },
+  {
+    "title":
+        "\u1019\u103c\u1031\u102c\u1000\u103a\u1026\u1038\u1006\u101b\u102c\u1010\u1031\u102c\u103a",
+    "sayartaw": "",
+    "description":
+        "\u1017\u102f\u1012\u1039\u1013\u1018\u102c\u101e\u102c\u104f \u1021\u1001\u103c\u1031\u1001\u1036\u101e\u102e\u101b\u102d\u101d\u1004\u103a \u1021\u101a\u1030\u1021\u1006\u1019\u103b\u102c\u1038\u1000\u102d\u102f \u101d\u1004\u103a\u101b\u102d\u102f\u1038\u1021\u1016\u103c\u1005\u103a\u101b\u103e\u1004\u103a\u1038\u101c\u1004\u103a\u1038\u1015\u103c\u1031\u102c\u1000\u103c\u102c\u1038\u1011\u102c\u1038\u101e\u1031\u102c \u1021\u1006\u102d\u102f\u1021\u1011\u102c\u1038\u1015\u102b\u101e\u100a\u103a\u104b",
+    "audioPath": "996f2da6-133b-4428-804b-9da7381250f5.ogg",
+    "srtPath": null,
+    "imagePath": null,
+    "isBookMark": false,
+  },
+  {
+    "title":
+        "\u1021\u101b\u103e\u1004\u103a\u101e\u102f\u1005\u102d\u1010\u1039\u1010 (\u1019\u1031\u102c\u103a\u1000\u103b\u103d\u1014\u103a\u1038) \u1006\u101b\u102c\u1010\u1031\u102c\u103a",
+    "sayartaw": "",
+    "description":
+        "\u1017\u102f\u1012\u1039\u1013\u1018\u102c\u101e\u102c\u104f \u1021\u1001\u103c\u1031\u1001\u1036\u101e\u102e\u101b\u102d\u101d\u1004\u103a \u1021\u101a\u1030\u1021\u1006\u1019\u103b\u102c\u1038\u1000\u102d\u102f \u101d\u1004\u103a\u101b\u102d\u102f\u1038\u1021\u1016\u103c\u1005\u103a\u101b\u103e\u1004\u103a\u1038\u101c\u1004\u103a\u1038\u1015\u103c\u1031\u102c\u1000\u103c\u102c\u1038\u1011\u102c\u1038\u101e\u1031\u102c \u1021\u1006\u102d\u102f\u1021\u1011\u102c\u1038\u1015\u102b\u101e\u100a\u103a\u104b",
+    "audioPath": "fc62c165-9993-4780-8ecc-42382c67bcfc.ogg",
+    "srtPath": null,
+    "imagePath": null,
+    "isBookMark": false,
+  },
+  {
+    "title":
+        "\u1019\u1004\u103a\u1038\u1000\u103d\u1014\u103a\u1038\u1006\u101b\u102c\u1010\u1031\u102c\u103a",
+    "sayartaw": "",
+    "description":
+        "\u1017\u102f\u1012\u1039\u1013\u1018\u102c\u101e\u102c\u104f \u1021\u1001\u103c\u1031\u1001\u1036\u101e\u102e\u101b\u102d\u101d\u1004\u103a \u1021\u101a\u1030\u1021\u1006\u1019\u103b\u102c\u1038\u1000\u102d\u102f \u101d\u1004\u103a\u101b\u102d\u102f\u1038\u1021\u1016\u103c\u1005\u103a\u101b\u103e\u1004\u103a\u1038\u101c\u1004\u103a\u1038\u1015\u103c\u1031\u102c\u1000\u103c\u102c\u1038\u1011\u102c\u1038\u101e\u1031\u102c \u1021\u1006\u102d\u102f\u1021\u1011\u102c\u1038\u1015\u102b\u101e\u100a\u103a\u104b",
+    "audioPath": "ef10a631-db21-4df6-9830-2ee61502d69f.ogg",
+    "srtPath": null,
+    "imagePath": null,
+    "isBookMark": false,
+  },
+  {
+    "title":
+        "\u1021\u101b\u103e\u1004\u103a\u101e\u102f\u1007\u102c\u1010 (\u1019\u1031\u1010\u1039\u1010\u102c\u1021\u1031\u1038\u1006\u101b\u102c\u1010\u1031\u102c\u103a)",
+    "sayartaw": "",
+    "description":
+        "\u1017\u102f\u1012\u1039\u1013\u1018\u102c\u101e\u102c\u104f \u1021\u1001\u103c\u1031\u1001\u1036\u101e\u102e\u101b\u102d\u101d\u1004\u103a \u1021\u101a\u1030\u1021\u1006\u1019\u103b\u102c\u1038\u1000\u102d\u102f \u101d\u1004\u103a\u101b\u102d\u102f\u1038\u1021\u1016\u103c\u1005\u103a\u101b\u103e\u1004\u103a\u1038\u101c\u1004\u103a\u1038\u1015\u103c\u1031\u102c\u1000\u103c\u102c\u1038\u1011\u102c\u1038\u101e\u1031\u102c \u1021\u1006\u102d\u102f\u1021\u1011\u102c\u1038\u1015\u102b\u101e\u100a\u103a\u104b",
+    "audioPath": "33c36098-a5aa-4151-b89a-8ddedc64aa55.ogg",
+    "srtPath": null,
+    "imagePath": null,
+    "isBookMark": false,
   },
 ];
-
 List<Lesson> lessonList = examples.map((e) => Lesson.fromJson(e)).toList();

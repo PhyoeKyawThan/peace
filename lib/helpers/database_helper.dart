@@ -13,9 +13,6 @@ class DatabaseHelper {
   Future<Database> get database async {
     if (_database != null) return _database!;
     _database = await _initDatabase();
-    if (_database != null) {
-      _initialDefaultInsert();
-    }
     return _database!;
   }
 
@@ -49,6 +46,12 @@ class DatabaseHelper {
     await db.insert('track', {'currentIndex': 0, 'seek': 0});
   }
 
+  Future<void> clearCache() async {
+    Database db = await instance.database;
+    await db.delete("lessons");
+    await db.delete("track");
+  }
+
   // Insert a lesson
   Future<int> insertLesson(Lesson lesson) async {
     Database db = await instance.database;
@@ -59,7 +62,7 @@ class DatabaseHelper {
     );
   }
 
-  Future<void> _initialDefaultInsert() async {
+  Future<void> initialDefaultInsert() async {
     if (!await _checkLessonExists()) {
       for (Lesson lesson in lessonList) {
         await insertLesson(lesson);

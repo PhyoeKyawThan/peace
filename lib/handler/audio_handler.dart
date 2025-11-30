@@ -1,5 +1,6 @@
 import 'package:audio_service/audio_service.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:mind_peace/helpers/external_storage.dart';
 import 'package:mind_peace/models/lesson_model.dart';
 
 class MyAudioHandler extends BaseAudioHandler {
@@ -10,8 +11,9 @@ class MyAudioHandler extends BaseAudioHandler {
     _player.playbackEventStream.map(_transformEvent).pipe(playbackState);
   }
 
-  Future<void> setAsset(String assetPath) async {
-    await _player.setAsset(assetPath);
+  Future<void> setFilePath(String filePath) async {
+    final audioDir = await initAudioFolder();
+    await _player.setFilePath("$audioDir/$filePath");
   }
 
   void addMediaItem(Lesson lesson) {

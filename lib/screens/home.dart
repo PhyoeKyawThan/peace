@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mind_peace/constants/colors.dart';
+import 'package:mind_peace/examples/dataset.dart';
+import 'package:mind_peace/helpers/database_helper.dart';
 // import 'package:mind_peace/dialogs/lesson_item_dialog.dart';
 // import 'package:mind_peace/models/dialog_model.dart';
 import 'package:mind_peace/screens/single_lesson_view.dart';

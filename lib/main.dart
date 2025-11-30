@@ -2,6 +2,8 @@ import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:mind_peace/constants/colors.dart';
 import 'package:mind_peace/handler/audio_handler.dart';
+import 'package:mind_peace/helpers/database_helper.dart';
+import 'package:mind_peace/helpers/external_storage.dart';
 import 'package:mind_peace/screens/book_mark.dart';
 import 'package:mind_peace/services/audio_service.dart';
 import 'package:mind_peace/screens/home.dart';
@@ -19,6 +21,7 @@ Future<void> main() async {
       androidNotificationOngoing: true,
     ),
   );
+  await prepareAudioFiles();
   runApp(
     ChangeNotifierProvider(
       create: (_) => MyAudioService(handler: audioHandler),
@@ -63,14 +66,8 @@ class _MindPeaceState extends State<MindPeace> {
     ).lessonList.isEmpty) {
       Provider.of<MyAudioService>(context, listen: false).loadLessons();
     }
-
-    // if (Provider.of<AudioService>(
-    //   context,
-    //   listen: false,
-    // ).bookMarkList.isEmpty) {
-    //   Provider.of<AudioService>(context, listen: false).loadBookMark();
-    // }
     _initAudioService();
+    _initDefaultInsert();
   }
 
   Future<void> _initAudioService() async {
@@ -78,6 +75,10 @@ class _MindPeaceState extends State<MindPeace> {
     await audioService.loadLastTrack();
 
     setState(() {});
+  }
+
+  Future<void> _initDefaultInsert() async {
+    await DatabaseHelper.instance.initialDefaultInsert();
   }
 
   @override
