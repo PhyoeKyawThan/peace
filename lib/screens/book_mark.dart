@@ -37,24 +37,26 @@ class _BookMarkScreenState extends State<BookMarkScreen> {
               ? HomeTopPlayer(lesson: audioService.currentPlayingLesson)
               : SizedBox.shrink(),
           bookMarks.isEmpty
-              ? Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.bookmark,
-                        size: 50,
-                        color: AppColors.accentDark,
-                      ),
-                      Text(
-                        "There is no bookmarks at this moment.",
-                        style: TextStyle(
+              ? Expanded(
+                  child: Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.bookmark,
+                          size: 50,
                           color: AppColors.accentDark,
-                          fontSize: 18,
-                          fontWeight: FontWeight.normal,
                         ),
-                      ),
-                    ],
+                        Text(
+                          "There is no bookmarks at this moment.",
+                          style: TextStyle(
+                            color: AppColors.accentDark,
+                            fontSize: 18,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 )
               : Expanded(
